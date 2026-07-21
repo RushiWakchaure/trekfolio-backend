@@ -16,9 +16,9 @@ public class CorsConfig {
 
         CorsConfiguration configuration = new CorsConfiguration();
 
-        configuration.setAllowedOrigins(List.of(
-                "http://localhost:5173",
-                "https://trekfolio-frontend-lbibduzo3-rushiwakchaures-projects.vercel.app"
+        configuration.setAllowedOriginPatterns(List.of(
+                "http://localhost:*",
+                "https://*.vercel.app"
         ));
 
         configuration.setAllowedMethods(List.of(
@@ -30,7 +30,12 @@ public class CorsConfig {
         ));
 
         configuration.setAllowedHeaders(List.of("*"));
+
+        configuration.setExposedHeaders(List.of("*"));
+
         configuration.setAllowCredentials(true);
+
+        configuration.setMaxAge(3600L);
 
         UrlBasedCorsConfigurationSource source =
                 new UrlBasedCorsConfigurationSource();
