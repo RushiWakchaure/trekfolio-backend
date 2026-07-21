@@ -12,7 +12,6 @@ import com.trekfolio.dto.LoginRequest;
 
 @RestController
 @RequestMapping("/api/users")
-@CrossOrigin("*")
 public class UserController {
 
     @Autowired
