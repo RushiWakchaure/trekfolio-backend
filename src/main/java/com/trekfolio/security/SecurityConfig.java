@@ -30,7 +30,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         .requestMatchers("/api/users/register", "/api/users/login").permitAll()
                         .anyRequest().authenticated()
-                )
+                );
                 //.addFilterBefore(jwtAuthenticationFilter,
                        // UsernamePasswordAuthenticationFilter.class);
 
